@@ -16,7 +16,8 @@
         app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.551" />
+        app:layout_constraintVertical_bias="0.551"
+        android:onClick="IntentAdminRegistration"/>
 
     <EditText
         android:id="@+id/registerPassword"
@@ -68,7 +69,8 @@
         app:layout_constraintHorizontal_bias="0.583"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.422" />
+        app:layout_constraintVertical_bias="0.422"
+        android:onClick="IntentVoterRegistration"/>
 
     <Button
         android:id="@+id/gotoLogin"
@@ -80,5 +82,6 @@
         app:layout_constraintHorizontal_bias="0.613"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.687" />
+        app:layout_constraintVertical_bias="0.687"
+        android:onClick="IntentLoginScreen"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
