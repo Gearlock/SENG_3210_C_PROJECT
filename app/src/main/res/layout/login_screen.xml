@@ -16,7 +16,8 @@
         app:layout_constraintHorizontal_bias="0.359"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.828" />
+        app:layout_constraintVertical_bias="0.828"
+        android:onClick="IntentRegistrationScreen"/>
 
     <EditText
         android:id="@+id/registerEmail2"

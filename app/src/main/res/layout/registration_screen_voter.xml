@@ -86,4 +86,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.546" />
 
+    <Button
+        android:id="@+id/registerVotertoDB"
+        android:layout_width="284dp"
+        android:layout_height="122dp"
+        android:text="Register"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.33"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.827" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
