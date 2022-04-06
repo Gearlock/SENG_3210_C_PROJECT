@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "854647119564",
+    "firebase_url": "https://seng3210project-default-rtdb.firebaseio.com",
+    "project_id": "seng3210project",
+    "storage_bucket": "seng3210project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:854647119564:android:6ef1dbba46400725ddac69",
+        "android_client_info": {
+          "package_name": "com.example.seng3210project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "854647119564-skm62te2emkaeo1cdem2i8efnnrp9f2r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSLOpM6FELZ_xBaRHplBf1YxdVgI-sMok"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "854647119564-skm62te2emkaeo1cdem2i8efnnrp9f2r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

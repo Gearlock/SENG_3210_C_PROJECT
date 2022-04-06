@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".voterMainPage"
+            android:exported="false" />
+        <activity
+            android:name=".voteForTopic"
+            android:exported="false" />
+        <activity
             android:name=".registration_screen_admin"
             android:exported="false" />
         <activity
