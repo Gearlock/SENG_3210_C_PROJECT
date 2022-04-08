@@ -20,12 +20,12 @@
         android:onClick="IntentRegistrationScreen"/>
 
     <EditText
-        android:id="@+id/registerEmail2"
+        android:id="@+id/registerFirstName"
         android:layout_width="271dp"
         android:layout_height="86dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Email:"
+        android:text="First Name:"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.271"

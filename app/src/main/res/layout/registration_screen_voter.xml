@@ -61,7 +61,7 @@
         app:layout_constraintVertical_bias="0.094" />
 
     <TextView
-        android:id="@+id/voterDOB"
+        android:id="@+id/voterDOBText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Date Of Birth(dd/mm/yy)"
@@ -73,7 +73,7 @@
         app:layout_constraintVertical_bias="0.459" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/voterDOB"
         android:layout_width="338dp"
         android:layout_height="72dp"
         android:ems="10"
@@ -96,6 +96,7 @@
         app:layout_constraintHorizontal_bias="0.33"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.827" />
+        app:layout_constraintVertical_bias="0.827"
+        android:onClick="addVoterInfo"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
