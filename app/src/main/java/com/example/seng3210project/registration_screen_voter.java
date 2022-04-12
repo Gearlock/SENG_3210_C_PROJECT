@@ -133,4 +133,5 @@ public class registration_screen_voter extends AppCompatActivity {
     public void setAGE(EditText AGE) {
         this.AGE = AGE;
     }
+
 }

@@ -32,8 +32,9 @@ public class registration_screen_admin extends AppCompatActivity {
         passWord = pass.getText().toString();
         age = AGE.getText().toString();
         database = FirebaseDatabase.getInstance("https://seng3210project-default-rtdb.firebaseio.com/");
-        Voter newVoter = new Voter(fiName,laName,passWord,age);
-        database.getInstance().getReference("Voters").child(newVoter.toString()).setValue(newVoter);
+        Admin newAdmin = new Admin(fiName,laName,passWord,age);
+        database.getInstance().getReference("Admins");
+        reference.child(newAdmin.lastname).setValue(newAdmin);
 
     }
     public void gotologinfromadmin(View view){
