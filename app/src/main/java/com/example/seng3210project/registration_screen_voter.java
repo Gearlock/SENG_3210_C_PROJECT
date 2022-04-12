@@ -17,38 +17,35 @@ public class registration_screen_voter extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference reference;
     Button registrationButtonVoter;
-    private EditText fname,lname,pass,DOB;
-    FirebaseAuth auth;
+    private EditText fname,lname,pass,AGE;
+    String fiName,laName,passWord,age;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.registration_screen_voter);
+    }
 
-        database = FirebaseDatabase.getInstance("https://seng3210project-default-rtdb.firebaseio.com/");
-        reference = database.getReference();
+    public void addVoterInfoToDB(View view){
         fname = (EditText)findViewById(R.id.voterFirstName);
         lname = (EditText)findViewById(R.id.voterLastName);
         pass = (EditText)findViewById(R.id.voterPassword);
-        DOB = (EditText)findViewById(R.id.voterAge);
+        AGE = (EditText) findViewById(R.id.voterAge);
+        fiName = fname.getText().toString();
+        laName = lname.getText().toString();
+        passWord = pass.getText().toString();
+        age = AGE.getText().toString();
+        database = FirebaseDatabase.getInstance("https://seng3210project-default-rtdb.firebaseio.com/");
+            Voter newVoter = new Voter(fiName,laName,passWord,age);
+            reference = database.getReference("Voters");
+            reference.child(newVoter.toString()).setValue(newVoter);
 
     }
-    public void addVoterInfoToDB(View view){
-    switch (view.getId()){
-        case R.id.registerVotertoDB:
-            registervoter();
-        break;
-        case R.id.voterRegistrationBackToLogin:
+
+    public void gotologinfromvoter(View view){
         startActivity(new Intent(this,login_screen.class));
-        break;
     }
-
-    }
-
-    private void registervoter() {
-        database.getInstance().getReference("Voters");
-    }
-
 
     public Button getRegistrationButtonVoter() {
         return registrationButtonVoter;

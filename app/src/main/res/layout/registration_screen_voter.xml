@@ -97,7 +97,7 @@
         app:layout_constraintHorizontal_bias="0.396"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.76" />
+        app:layout_constraintVertical_bias="0.76"/>
 
     <Button
         android:id="@+id/voterRegistrationBackToLogin"
@@ -109,6 +109,7 @@
         app:layout_constraintHorizontal_bias="0.349"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.933" />
+        app:layout_constraintVertical_bias="0.933"
+        android:onClick="gotologinfromvoter"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
