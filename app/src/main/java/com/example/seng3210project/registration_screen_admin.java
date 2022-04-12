@@ -16,24 +16,24 @@ public class registration_screen_admin extends AppCompatActivity {
     DatabaseReference reference;
     Button registrationButtonVoter;
     private EditText fname,lname,pass,AGE;
-    String fiName,laName,passWord,age;
+    private String fiName,laName,passWord,age;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.registration_screen_admin);
     }
     public void addAdminInfoToDB(View view){
-        fname = (EditText)findViewById(R.id.voterFirstName);
-        lname = (EditText)findViewById(R.id.voterLastName);
-        pass = (EditText)findViewById(R.id.voterPassword);
-        AGE = (EditText) findViewById(R.id.voterAge);
+        fname = (EditText)findViewById(R.id.adminFirstName);
+        lname = (EditText)findViewById(R.id.adminLastName);
+        pass = (EditText)findViewById(R.id.adminPassword);
+        AGE = (EditText) findViewById(R.id.adminAge);
         fiName = fname.getText().toString();
         laName = lname.getText().toString();
         passWord = pass.getText().toString();
         age = AGE.getText().toString();
         database = FirebaseDatabase.getInstance("https://seng3210project-default-rtdb.firebaseio.com/");
         Admin newAdmin = new Admin(fiName,laName,passWord,age);
-        database.getInstance().getReference("Admins");
+        reference = database.getReference("Admin");
         reference.child(newAdmin.lastname).setValue(newAdmin);
 
     }

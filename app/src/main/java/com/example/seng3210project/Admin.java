@@ -1,7 +1,9 @@
 package com.example.seng3210project;
 
 public class Admin {
+
     public String firstname,lastname,password,age;
+
     public Admin(){
 
     }

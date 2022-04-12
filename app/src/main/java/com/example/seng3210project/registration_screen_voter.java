@@ -18,7 +18,7 @@ public class registration_screen_voter extends AppCompatActivity {
     DatabaseReference reference;
     Button registrationButtonVoter;
     private EditText fname,lname,pass,AGE;
-    String fiName,laName,passWord,age;
+    private String fiName,laName,passWord,age;
 
 
     @Override
