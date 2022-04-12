@@ -2,11 +2,13 @@ package com.example.seng3210project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -16,7 +18,7 @@ public class registration_screen_voter extends AppCompatActivity {
     DatabaseReference reference;
     Button registrationButtonVoter;
     private EditText fname,lname,pass,DOB;
-
+    FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,24 +27,29 @@ public class registration_screen_voter extends AppCompatActivity {
 
         database = FirebaseDatabase.getInstance("https://seng3210project-default-rtdb.firebaseio.com/");
         reference = database.getReference();
-
-
-    }
-    public void addVoterInfo(View view){
-
         fname = (EditText)findViewById(R.id.voterFirstName);
         lname = (EditText)findViewById(R.id.voterLastName);
         pass = (EditText)findViewById(R.id.voterPassword);
-        DOB = (EditText)findViewById(R.id.voterDOB);
-        reference = database.getReference("Voter First Name");
-        reference.setValue(fname.getText().toString());
-        reference = database.getReference("Voter Last Name");
-        reference.setValue(lname.getText().toString());
-        reference = database.getReference("Voter Password");
-        reference.setValue(pass.getText().toString());
-        reference = database.getReference("Voter Date Of Birth");
-        reference.setValue(DOB.getText().toString());
+        DOB = (EditText)findViewById(R.id.voterAge);
+
     }
+    public void addVoterInfoToDB(View view){
+    switch (view.getId()){
+        case R.id.registerVotertoDB:
+            registervoter();
+        break;
+        case R.id.voterRegistrationBackToLogin:
+        startActivity(new Intent(this,login_screen.class));
+        break;
+    }
+
+    }
+
+    private void registervoter() {
+        database.getInstance().getReference("Voters");
+    }
+
+
     public Button getRegistrationButtonVoter() {
         return registrationButtonVoter;
     }

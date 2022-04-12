@@ -61,24 +61,24 @@
         app:layout_constraintVertical_bias="0.094" />
 
     <TextView
-        android:id="@+id/voterDOBText"
+        android:id="@+id/voterAgeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Date Of Birth(dd/mm/yy)"
+        android:text="Age"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.106"
+        app:layout_constraintHorizontal_bias="0.051"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.459" />
+        app:layout_constraintVertical_bias="0.458" />
 
     <EditText
-        android:id="@+id/voterDOB"
+        android:id="@+id/voterAge"
         android:layout_width="338dp"
         android:layout_height="72dp"
         android:ems="10"
         android:inputType="date"
-        android:text="DOB"
+        android:text="Age"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.219"
@@ -88,15 +88,27 @@
 
     <Button
         android:id="@+id/registerVotertoDB"
-        android:layout_width="284dp"
-        android:layout_height="122dp"
+        android:layout_width="252dp"
+        android:layout_height="96dp"
+        android:onClick="addVoterInfoToDB"
         android:text="Register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.33"
+        app:layout_constraintHorizontal_bias="0.396"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.827"
-        android:onClick="addVoterInfo"/>
+        app:layout_constraintVertical_bias="0.76" />
+
+    <Button
+        android:id="@+id/voterRegistrationBackToLogin"
+        android:layout_width="265dp"
+        android:layout_height="87dp"
+        android:text="Go Back to Login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.349"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.933" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

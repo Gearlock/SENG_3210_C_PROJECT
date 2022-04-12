@@ -7,6 +7,18 @@
     android:layout_height="match_parent">
 
     <Button
+        android:id="@+id/adminRegistrationBackToLogin"
+        android:layout_width="265dp"
+        android:layout_height="87dp"
+        android:text="Go Back to Login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.39"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.959" />
+
+    <Button
         android:id="@+id/registerAdmintoDB"
         android:layout_width="184dp"
         android:layout_height="92dp"
@@ -31,10 +43,10 @@
         app:layout_constraintVertical_bias="0.036" />
 
     <TextView
-        android:id="@+id/adminDOB"
+        android:id="@+id/adminAgeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Date Of Birth(dd/mm/yy)"
+        android:text="Age"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.106"
@@ -57,12 +69,12 @@
         app:layout_constraintVertical_bias="0.099" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/adminAge"
         android:layout_width="349dp"
         android:layout_height="77dp"
         android:ems="10"
         android:inputType="date"
-        android:text="DOB"
+        android:text="Age"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.258"
