@@ -16,7 +16,8 @@
         app:layout_constraintHorizontal_bias="0.112"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.225" />
+        app:layout_constraintVertical_bias="0.225"
+        android:onClick="gotocreatevotingtopic"/>
 
     <Button
         android:id="@+id/editUserDetails"
@@ -28,7 +29,8 @@
         app:layout_constraintHorizontal_bias="0.936"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.225" />
+        app:layout_constraintVertical_bias="0.225"
+        android:onClick="gotoadminregisterfromadminmain"/>
 
     <Button
         android:id="@+id/reviewVoterDetails"
@@ -40,7 +42,8 @@
         app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.43" />
+        app:layout_constraintVertical_bias="0.43"
+        android:onClick="gotoreviewvoterdetail"/>
 
     <Button
         android:id="@+id/resultsAdmin"
@@ -52,19 +55,8 @@
         app:layout_constraintHorizontal_bias="0.917"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.433" />
-
-    <Button
-        android:id="@+id/viewPastTopics"
-        android:layout_width="168dp"
-        android:layout_height="77dp"
-        android:text="View past topics"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.127"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.603" />
+        app:layout_constraintVertical_bias="0.433"
+        android:onClick="gotovotingresults"/>
 
     <Button
         android:id="@+id/adminLogout"
@@ -73,8 +65,9 @@
         android:text="LOGout"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.938"
+        app:layout_constraintHorizontal_bias="0.546"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.605" />
+        app:layout_constraintVertical_bias="0.605"
+        android:onClick="gotologinfromadmin"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,6 +2,7 @@ package com.example.seng3210project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 public class voterMainPage extends AppCompatActivity {
@@ -11,4 +12,6 @@ public class voterMainPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.voter_main_page);
     }
+
+    //startActivity(new Intent(getApplicationContext(),registration_screen_voter.class));
 }
