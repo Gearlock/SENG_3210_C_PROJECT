@@ -15,4 +15,35 @@ public class Voter {
     this.password = password;
     }
 
+    public String getAge() {
+        return age;
+    }
+
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
+    }
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }

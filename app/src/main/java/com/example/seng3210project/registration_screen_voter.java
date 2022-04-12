@@ -38,8 +38,7 @@ public class registration_screen_voter extends AppCompatActivity {
         age = AGE.getText().toString();
         database = FirebaseDatabase.getInstance("https://seng3210project-default-rtdb.firebaseio.com/");
             Voter newVoter = new Voter(fiName,laName,passWord,age);
-            reference = database.getReference("Voters");
-            reference.child(newVoter.toString()).setValue(newVoter);
+            database.getInstance().getReference("Voters").child(newVoter.toString()).setValue(newVoter);
 
     }
 
@@ -55,5 +54,83 @@ public class registration_screen_voter extends AppCompatActivity {
         this.registrationButtonVoter = registrationButtonVoter;
     }
 
+    public FirebaseDatabase getDatabase() {
+        return database;
+    }
 
+    public void setDatabase(FirebaseDatabase database) {
+        this.database = database;
+    }
+
+    public DatabaseReference getReference() {
+        return reference;
+    }
+
+    public void setReference(DatabaseReference reference) {
+        this.reference = reference;
+    }
+
+    public String getFiName() {
+        return fiName;
+    }
+
+    public void setFiName(String fiName) {
+        this.fiName = fiName;
+    }
+
+    public String getLaName() {
+        return laName;
+    }
+
+    public void setLaName(String laName) {
+        this.laName = laName;
+    }
+
+    public String getPassWord() {
+        return passWord;
+    }
+
+    public void setPassWord(String passWord) {
+        this.passWord = passWord;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
+    }
+
+    public EditText getFname() {
+        return fname;
+    }
+
+    public void setFname(EditText fname) {
+        this.fname = fname;
+    }
+
+    public EditText getLname() {
+        return lname;
+    }
+
+    public void setLname(EditText lname) {
+        this.lname = lname;
+    }
+
+    public EditText getPass() {
+        return pass;
+    }
+
+    public void setPass(EditText pass) {
+        this.pass = pass;
+    }
+
+    public EditText getAGE() {
+        return AGE;
+    }
+
+    public void setAGE(EditText AGE) {
+        this.AGE = AGE;
+    }
 }
