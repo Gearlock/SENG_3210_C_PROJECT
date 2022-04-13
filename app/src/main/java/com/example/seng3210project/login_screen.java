@@ -16,6 +16,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import org.w3c.dom.Text;
+
 // Log in screen for voters and administrators
 public class login_screen extends AppCompatActivity {
 
@@ -38,15 +40,25 @@ public class login_screen extends AppCompatActivity {
         enteredfirstName = firstName.getText().toString();
         reference = database.getInstance().getReference("Voters");
 
-        reference.child("Voters").addValueEventListener(new ValueEventListener() {
+        reference.child(enteredfirstName).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                startActivity(new Intent(getApplicationContext(),voterMainPage.class));
+                Information newInfo = snapshot.getValue(Information.class);
+                if(newInfo!= null){
+                    Toast.makeText(login_screen.this,"test    "+newInfo.getpasswordofUser(), Toast.LENGTH_LONG).show();
+                }
+                else{
+                    Toast.makeText(login_screen.this,"OH NO", Toast.LENGTH_LONG).show();
+                }
+                /*TextView t = (TextView) findViewById(R.id.loginscreenName);
+                databaseFirstname = newInfo.getpasswordofUser();
+                t.setText(databaseFirstname);*/
+                //startActivity(new Intent(getApplicationContext(),voterMainPage.class));
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(login_screen.this,"YOU MESSED IT UP AGAIN!", Toast.LENGTH_LONG).show();
+                Toast.makeText(login_screen.this,"ERROR GETTING DATA ", Toast.LENGTH_LONG).show();
             }
         });
     }

@@ -118,7 +118,7 @@ public class registration_screen_admin extends AppCompatActivity {
         database = FirebaseDatabase.getInstance("https://seng3210project-default-rtdb.firebaseio.com/"); // Get database instance
         Admin newAdmin = new Admin(fiName,laName,passWord,age); // Make a new admin with inputted info
         reference = database.getReference("Admin");
-        reference.child(newAdmin.lastname).setValue(newAdmin); // Add the admin to the database
+        reference.child(newAdmin.firstname).setValue(newAdmin); // Add the admin to the database
 
     }
 

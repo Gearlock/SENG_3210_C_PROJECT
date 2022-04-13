@@ -41,9 +41,9 @@ public class registration_screen_voter extends AppCompatActivity {
         passWord = pass.getText().toString();
         age = AGE.getText().toString();
         database = FirebaseDatabase.getInstance("https://seng3210project-default-rtdb.firebaseio.com/"); // Get database instance
-            Voter newVoter = new Voter(fiName,laName,passWord,age); // Make a new voter with inputted info
+        Voter newVoter = new Voter(fiName,laName,passWord,age); // Make a new voter with inputted info
             reference = database.getReference("Voters");
-            reference.child(newVoter.lastname).setValue(newVoter); // Add the voter to the database
+            reference.child(newVoter.firstname).setValue(newVoter); // Add the voter to the database
     }
 
     public void gotologinfromvoter(View view){
