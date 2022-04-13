@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/registerAdmin"
         android:layout_width="346dp"
         android:layout_height="121dp"
+        android:backgroundTint="#4772E4"
         android:onClick="IntentAdminRegistration"
         android:text="Register as an administrator"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -21,8 +23,8 @@
 
     <TextView
         android:id="@+id/screenName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="59dp"
+        android:layout_height="21dp"
         android:text="Register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,27 +35,29 @@
 
     <Button
         android:id="@+id/registerVoter"
-        android:layout_width="355dp"
-        android:layout_height="112dp"
+        android:layout_width="347dp"
+        android:layout_height="114dp"
+        android:backgroundTint="#4772E4"
         android:onClick="IntentVoterRegistration"
         android:text="Register as a Voter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.589"
+        app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.197" />
+        app:layout_constraintVertical_bias="0.178" />
 
     <Button
         android:id="@+id/gotoLogin"
-        android:layout_width="342dp"
-        android:layout_height="124dp"
+        android:layout_width="348dp"
+        android:layout_height="123dp"
+        android:backgroundTint="#4772E4"
         android:onClick="IntentLoginScreen"
         android:text="Have an account? Login Here"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.698" />
+        app:layout_constraintVertical_bias="0.707" />
 </androidx.constraintlayout.widget.ConstraintLayout>
