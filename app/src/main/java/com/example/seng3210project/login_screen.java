@@ -45,9 +45,9 @@ public class login_screen extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot dataSnapshot: snapshot.getChildren()) {
                     Information newInfo = dataSnapshot.getValue(Information.class);
-                    databaseFirstname = newInfo.getfirstnameofUser();
+                    databaseFirstname =dataSnapshot.getKey().toString();
                     if (true) {
-                        Toast.makeText(login_screen.this, "test    " + dataSnapshot.getValue().toString(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(login_screen.this, "test    " + databaseFirstname, Toast.LENGTH_LONG).show();
                         startActivity(new Intent(getApplicationContext(),voterMainPage.class));
                     } else {
                         Toast.makeText(login_screen.this, "OH NO", Toast.LENGTH_LONG).show();
