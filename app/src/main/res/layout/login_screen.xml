@@ -48,7 +48,7 @@
         app:layout_constraintVertical_bias="0.648" />
 
     <EditText
-        android:id="@+id/registerPassword2"
+        android:id="@+id/registerPassword"
         android:layout_width="266dp"
         android:layout_height="69dp"
         android:ems="10"
@@ -84,5 +84,6 @@
         app:layout_constraintHorizontal_bias="0.355"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.458" />
+        app:layout_constraintVertical_bias="0.458"
+        android:onClick="loginAsVoter"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
