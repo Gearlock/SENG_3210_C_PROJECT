@@ -38,22 +38,21 @@ public class login_screen extends AppCompatActivity {
         password = (EditText)findViewById(R.id.registerPassword);
         enteredpassword = password.getText().toString();
         enteredfirstName = firstName.getText().toString();
-        reference = database.getInstance().getReference("Voters");
+        reference = database.getInstance().getReference().child("Voters");
 
-        reference.child(enteredfirstName).addValueEventListener(new ValueEventListener() {
+        reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                Information newInfo = snapshot.getValue(Information.class);
-                if(newInfo!= null){
-                    Toast.makeText(login_screen.this,"test    "+newInfo.getpasswordofUser(), Toast.LENGTH_LONG).show();
+                for(DataSnapshot dataSnapshot: snapshot.getChildren()) {
+                    Information newInfo = dataSnapshot.getValue(Information.class);
+                    databaseFirstname = newInfo.getfirstnameofUser();
+                    if (true) {
+                        Toast.makeText(login_screen.this, "test    " + dataSnapshot.getValue().toString(), Toast.LENGTH_LONG).show();
+                        startActivity(new Intent(getApplicationContext(),voterMainPage.class));
+                    } else {
+                        Toast.makeText(login_screen.this, "OH NO", Toast.LENGTH_LONG).show();
+                    }
                 }
-                else{
-                    Toast.makeText(login_screen.this,"OH NO", Toast.LENGTH_LONG).show();
-                }
-                /*TextView t = (TextView) findViewById(R.id.loginscreenName);
-                databaseFirstname = newInfo.getpasswordofUser();
-                t.setText(databaseFirstname);*/
-                //startActivity(new Intent(getApplicationContext(),voterMainPage.class));
             }
 
             @Override

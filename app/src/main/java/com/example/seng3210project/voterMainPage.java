@@ -23,4 +23,12 @@ public class voterMainPage extends AppCompatActivity { // The main page for the 
     }
 
 
+    public void IntentLoginScreen(View view) {
+        startActivity(new Intent(getApplicationContext(),login_screen.class));
+    }
+
+    public void IntentVoterRegistration(View view) {
+        startActivity(new Intent(getApplicationContext(),registration_screen_voter.class));
+    }
+
 }
