@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".review_voter_details"
+            android:exported="false" />
+        <activity
+            android:name=".admin_voting_results_page"
+            android:exported="false" />
+        <activity
+            android:name=".add_topic"
+            android:exported="false" />
+        <activity
+            android:name=".voter_voting_results_page"
+            android:exported="false" />
+        <activity
             android:name=".manager_main_page"
             android:exported="false" />
         <activity
