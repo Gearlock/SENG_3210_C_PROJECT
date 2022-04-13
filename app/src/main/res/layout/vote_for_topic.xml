@@ -8,29 +8,33 @@
 
     <TextView
         android:id="@+id/votingTopic"
-        android:layout_width="333dp"
-        android:layout_height="161dp"
+        android:layout_width="338dp"
+        android:layout_height="188dp"
         android:text="Voting Topic Here"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.21" />
+        app:layout_constraintVertical_bias="0.11" />
 
     <Button
         android:id="@+id/postiviteVote"
         android:layout_width="159dp"
         android:layout_height="98dp"
+        android:backgroundTint="#4CAF50"
         android:text="In favour"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.548" />
 
     <Button
         android:id="@+id/negativeVote"
-        android:layout_width="158dp"
-        android:layout_height="104dp"
+        android:layout_width="157dp"
+        android:layout_height="97dp"
+        android:backgroundTint="#EF3D3D"
         android:text="Against"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

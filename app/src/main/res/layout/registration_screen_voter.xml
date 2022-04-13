@@ -15,10 +15,10 @@
         android:text="Last Name:"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.106"
+        app:layout_constraintHorizontal_bias="0.107"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.22" />
+        app:layout_constraintVertical_bias="0.231" />
 
     <EditText
         android:id="@+id/voterPassword"
@@ -67,10 +67,10 @@
         android:text="Age"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintHorizontal_bias="0.038"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.458" />
+        app:layout_constraintVertical_bias="0.466" />
 
     <EditText
         android:id="@+id/voterAge"
@@ -88,28 +88,30 @@
 
     <Button
         android:id="@+id/registerVotertoDB"
-        android:layout_width="252dp"
-        android:layout_height="96dp"
+        android:layout_width="267dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#4772E4"
         android:onClick="addVoterInfoToDB"
         android:text="Register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.396"
+        app:layout_constraintHorizontal_bias="0.409"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.76"/>
+        app:layout_constraintVertical_bias="0.774" />
 
     <Button
         android:id="@+id/voterRegistrationBackToLogin"
         android:layout_width="265dp"
-        android:layout_height="87dp"
+        android:layout_height="72dp"
+        android:backgroundTint="#4772E4"
+        android:onClick="gotologinfromvoter"
         android:text="Go Back to Login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.349"
+        app:layout_constraintHorizontal_bias="0.413"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.933"
-        android:onClick="gotologinfromvoter"/>
+        app:layout_constraintVertical_bias="0.917" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
