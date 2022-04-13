@@ -18,6 +18,8 @@ import com.google.firebase.database.ValueEventListener;
 
 import org.w3c.dom.Text;
 
+import java.util.Objects;
+
 // Log in screen for voters and administrators
 public class login_screen extends AppCompatActivity {
 
@@ -40,17 +42,19 @@ public class login_screen extends AppCompatActivity {
         enteredfirstName = firstName.getText().toString();
         reference = database.getInstance().getReference().child("Voters");
 
-        reference.addListenerForSingleValueEvent(new ValueEventListener() {
+        reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot dataSnapshot: snapshot.getChildren()) {
-                    Information newInfo = dataSnapshot.getValue(Information.class);
-                    databaseFirstname =dataSnapshot.getKey().toString();
-                    if (true) {
-                        Toast.makeText(login_screen.this, "test    " + databaseFirstname, Toast.LENGTH_LONG).show();
+                    databaseFirstname = dataSnapshot.child("firstname").getValue().toString();
+                    databasePassword = dataSnapshot.child("password").getValue().toString();
+                    if(databaseFirstname.equals(enteredfirstName) && databasePassword.equals(enteredpassword)) {
                         startActivity(new Intent(getApplicationContext(),voterMainPage.class));
-                    } else {
-                        Toast.makeText(login_screen.this, "OH NO", Toast.LENGTH_LONG).show();
+                        break;
+                    }
+                    else {
+                        Toast.makeText(login_screen.this, "First name or Password is incorrect please try again", Toast.LENGTH_LONG).show();
+                        break;
                     }
                 }
             }
