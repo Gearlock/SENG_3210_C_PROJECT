@@ -10,64 +10,69 @@
         android:id="@+id/createTopic"
         android:layout_width="172dp"
         android:layout_height="97dp"
+        android:backgroundTint="#4772E4"
+        android:onClick="gotocreatevotingtopic"
         android:text="Create voting topic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.112"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.225"
-        android:onClick="gotocreatevotingtopic"/>
+        app:layout_constraintVertical_bias="0.225" />
 
     <Button
         android:id="@+id/editUserDetails"
         android:layout_width="160dp"
         android:layout_height="97dp"
+        android:backgroundTint="#4772E4"
+        android:onClick="gotoadminregisterfromadminmain"
         android:text="Edit user details"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.936"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.225"
-        android:onClick="gotoadminregisterfromadminmain"/>
+        app:layout_constraintVertical_bias="0.225" />
 
     <Button
         android:id="@+id/reviewVoterDetails"
         android:layout_width="168dp"
         android:layout_height="79dp"
+        android:backgroundTint="#4772E4"
+        android:onClick="gotoreviewvoterdetail"
         android:text="review voter details"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.43"
-        android:onClick="gotoreviewvoterdetail"/>
+        app:layout_constraintVertical_bias="0.43" />
 
     <Button
         android:id="@+id/resultsAdmin"
-        android:layout_width="155dp"
-        android:layout_height="83dp"
+        android:layout_width="159dp"
+        android:layout_height="82dp"
+        android:backgroundTint="#4772E4"
+        android:onClick="gotovotingresults"
         android:text="Results"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.917"
+        app:layout_constraintHorizontal_bias="0.932"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.433"
-        android:onClick="gotovotingresults"/>
+        app:layout_constraintVertical_bias="0.432" />
 
     <Button
         android:id="@+id/adminLogout"
         android:layout_width="151dp"
         android:layout_height="75dp"
+        android:backgroundTint="#E44141"
+        android:onClick="gotologinfromadmin"
         android:text="LOGout"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.546"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.605"
-        android:onClick="gotologinfromadmin"/>
+        app:layout_constraintVertical_bias="0.605" />
 </androidx.constraintlayout.widget.ConstraintLayout>
