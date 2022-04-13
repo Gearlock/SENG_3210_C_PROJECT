@@ -19,15 +19,16 @@ public class manager_main_page extends AppCompatActivity {
     }
 
     public void gotovotingresults(View view) {
-        //startActivity(new Intent(getApplicationContext(),.class));
+        startActivity(new Intent(getApplicationContext(),admin_voting_results_page.class));
     }
 
     public void gotocreatevotingtopic(View view) {
+        startActivity(new Intent(getApplicationContext(),add_topic.class));
     }
 
 
     public void gotoreviewvoterdetail(View view) {
-        //startActivity(new Intent(getApplicationContext(),registration_screen_voter.class));
+        startActivity(new Intent(getApplicationContext(),review_voter_details.class));
     }
 
     public void gotologinfromadmin(View view) {
