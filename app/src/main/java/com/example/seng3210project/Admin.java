@@ -1,19 +1,20 @@
 package com.example.seng3210project;
 
-public class Admin {
+public class Admin { // Generic class to hold the administrator's log-in info
 
     public String firstname,lastname,password,age;
 
     public Admin(){
 
     }
-    public Admin(String firstname,String lastname,String password,String age){
+    public Admin(String firstname, String lastname, String password,String age){
     this.firstname = firstname;
     this.lastname = lastname;
     this.password = password;
     this.age = age;
     }
 
+    // Setters and Getters for the administrator's info
     public String getFirstname() {
         return firstname;
     }

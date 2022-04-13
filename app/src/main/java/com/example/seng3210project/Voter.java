@@ -1,6 +1,6 @@
 package com.example.seng3210project;
 
-public class Voter {
+public class Voter { // Generic class to hold the log-in info of a voter
 
     public String firstname,lastname,password,age;
 
@@ -15,6 +15,7 @@ public class Voter {
     this.password = password;
     }
 
+    // Setters and Getters for the voter's info
     public String getAge() {
         return age;
     }

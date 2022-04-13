@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class voterMainPage extends AppCompatActivity {
+public class voterMainPage extends AppCompatActivity { // The main page for the voter, where they can choose from several options
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

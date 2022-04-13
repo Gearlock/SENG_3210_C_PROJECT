@@ -12,11 +12,15 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+// Registration process for registering a voter to the system
 public class registration_screen_voter extends AppCompatActivity {
-
+    // Set up firebase database
     FirebaseDatabase database;
     DatabaseReference reference;
+
     Button registrationButtonVoter;
+
+    // Variables for voter user info
     private EditText fname,lname,pass,AGE;
     private String fiName,laName,passWord,age;
 
@@ -27,7 +31,7 @@ public class registration_screen_voter extends AppCompatActivity {
         setContentView(R.layout.registration_screen_voter);
     }
 
-    public void addVoterInfoToDB(View view){
+    public void addVoterInfoToDB(View view){ // Function to add the inputted voter info to the database
         fname = (EditText)findViewById(R.id.voterFirstName);
         lname = (EditText)findViewById(R.id.voterLastName);
         pass = (EditText)findViewById(R.id.voterPassword);
@@ -36,14 +40,14 @@ public class registration_screen_voter extends AppCompatActivity {
         laName = lname.getText().toString();
         passWord = pass.getText().toString();
         age = AGE.getText().toString();
-        database = FirebaseDatabase.getInstance("https://seng3210project-default-rtdb.firebaseio.com/");
-            Voter newVoter = new Voter(fiName,laName,passWord,age);
+        database = FirebaseDatabase.getInstance("https://seng3210project-default-rtdb.firebaseio.com/"); // Get database instance
+            Voter newVoter = new Voter(fiName,laName,passWord,age); // Make a new voter with inputted info
             reference = database.getReference("Voters");
-            reference.child(newVoter.lastname).setValue(newVoter);
+            reference.child(newVoter.lastname).setValue(newVoter); // Add the voter to the database
     }
 
     public void gotologinfromvoter(View view){
-        startActivity(new Intent(this,login_screen.class));
+        startActivity(new Intent(this,login_screen.class)); // Go to the log-in screen
     }
 
     public Button getRegistrationButtonVoter() {

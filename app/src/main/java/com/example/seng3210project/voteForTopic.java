@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class voteForTopic extends AppCompatActivity {
+public class voteForTopic extends AppCompatActivity { // Function to to allow a voter to vote for or against a topic
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
