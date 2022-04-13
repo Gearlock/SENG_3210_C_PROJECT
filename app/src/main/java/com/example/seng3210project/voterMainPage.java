@@ -15,11 +15,11 @@ public class voterMainPage extends AppCompatActivity { // The main page for the 
     }
 
     public void IntentVoterResults(View view) {
-        startActivity(new Intent(getApplicationContext(),voter_voting_results_page.class));
+        startActivity(new Intent(getApplicationContext(),voter_voting_results_page.class)); // Go to the Results page
     }
 
     public void IntentVotingForTopic(View view) {
-        startActivity(new Intent(getApplicationContext(),voteForTopic.class));
+        startActivity(new Intent(getApplicationContext(),voteForTopic.class)); // Go to Topic Voting page
     }
 
 
