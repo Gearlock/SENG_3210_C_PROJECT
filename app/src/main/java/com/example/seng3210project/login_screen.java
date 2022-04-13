@@ -65,5 +65,34 @@ public class login_screen extends AppCompatActivity {
             }
         });
     }
+    public void loginAsAdmin(View view) {
+        firstName = (EditText) findViewById(R.id.registerFirstName);
+        password = (EditText) findViewById(R.id.registerPassword);
+        enteredpassword = password.getText().toString();
+        enteredfirstName = firstName.getText().toString();
+        reference = database.getInstance().getReference().child("Admin");
+
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                    databaseFirstname = dataSnapshot.child("firstname").getValue().toString();
+                    databasePassword = dataSnapshot.child("password").getValue().toString();
+                    if(databaseFirstname.equals(enteredfirstName) && databasePassword.equals(enteredpassword)) {
+                        startActivity(new Intent(getApplicationContext(), manager_main_page.class));
+                        break;
+                    } else {
+                        Toast.makeText(login_screen.this, "First name or Password is incorrect please try again", Toast.LENGTH_LONG).show();
+                        break;
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(login_screen.this, "ERROR GETTING DATA ", Toast.LENGTH_LONG).show();
+            }
+        });
+    }
 
 }
