@@ -26,11 +26,6 @@ public class manager_main_page extends AppCompatActivity {
         startActivity(new Intent(getApplicationContext(),add_topic.class));
     }
 
-
-    public void gotoreviewvoterdetail(View view) {
-        startActivity(new Intent(getApplicationContext(),review_voter_details.class));
-    }
-
     public void gotologinfromadmin(View view) {
         startActivity(new Intent(getApplicationContext(),login_screen.class));
     }

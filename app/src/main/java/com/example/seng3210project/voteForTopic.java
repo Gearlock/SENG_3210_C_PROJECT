@@ -19,7 +19,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class voteForTopic extends AppCompatActivity { // Function to to allow a voter to vote for or against a topic
     FirebaseDatabase database;
-    DatabaseReference reference;
+    DatabaseReference reference,innerReference;
     private TextView topicDisplay;
     private String topicFromDB,topicNamefromDB;
     int yesVote,noVote;
@@ -53,18 +53,18 @@ public class voteForTopic extends AppCompatActivity { // Function to to allow a 
 
     public void voterVoteFor(View view) {
         reference = database.getInstance().getReference().child("Topic");
-        reference = database.getReference(topicNamefromDB);
+        innerReference = reference.child(topicNamefromDB);
         yesVote++;
-        reference.child("Yes votes").setValue(yesVote);
+        innerReference.child("Yes votes").setValue(yesVote);
         startActivity(new Intent(getApplicationContext(),voterMainPage.class));
         Toast.makeText(this,"Vote cast successfully", Toast.LENGTH_LONG);
     }
 
     public void voterVoteAgainst(View view) {
         reference = database.getInstance().getReference().child("Topic");
-        reference = database.getReference(topicNamefromDB);
+        innerReference = reference.child(topicNamefromDB);
         noVote++;
-        reference.child("No votes").setValue(noVote);
+        innerReference.child("No votes").setValue(noVote);
         startActivity(new Intent(getApplicationContext(),voterMainPage.class));
         Toast.makeText(this,"Vote cast successfully", Toast.LENGTH_LONG);
     }
