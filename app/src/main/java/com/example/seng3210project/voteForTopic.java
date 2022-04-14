@@ -21,7 +21,7 @@ public class voteForTopic extends AppCompatActivity { // Function to to allow a 
     FirebaseDatabase database;
     DatabaseReference reference,innerReference;
     private TextView topicDisplay;
-    private String topicFromDB,topicNamefromDB;
+    private String topicFromDB,topicNameFromDB;
     int yesVote,noVote;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,10 +32,10 @@ public class voteForTopic extends AppCompatActivity { // Function to to allow a 
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-                    topicFromDB = dataSnapshot.getValue().toString();
+                    String topicNameFromDB = dataSnapshot.child("topicName").getValue().toString();
                     topicDisplay = (TextView) findViewById(R.id.votingTopic);
-                    topicDisplay.setText("Topic details \n"+ topicFromDB);
-                    topicNamefromDB = dataSnapshot.getKey();
+                    topicDisplay.setText("Topic details \n"+ topicNameFromDB);
+
                 }
             }
 
@@ -53,7 +53,7 @@ public class voteForTopic extends AppCompatActivity { // Function to to allow a 
 
     public void voterVoteFor(View view) {
         reference = database.getInstance().getReference().child("Topic");
-        innerReference = reference.child(topicNamefromDB);
+        innerReference = reference.child(topicNameFromDB);
         yesVote++;
         innerReference.child("Yes votes").setValue(yesVote);
         startActivity(new Intent(getApplicationContext(),voterMainPage.class));
@@ -62,7 +62,7 @@ public class voteForTopic extends AppCompatActivity { // Function to to allow a 
 
     public void voterVoteAgainst(View view) {
         reference = database.getInstance().getReference().child("Topic");
-        innerReference = reference.child(topicNamefromDB);
+        innerReference = reference.child(topicNameFromDB);
         noVote++;
         innerReference.child("No votes").setValue(noVote);
         startActivity(new Intent(getApplicationContext(),voterMainPage.class));
