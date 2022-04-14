@@ -25,13 +25,14 @@ public class admin_voting_results_page extends AppCompatActivity {
         setContentView(R.layout.admin_voting_results_page);
         adminTopicName = (TextView)findViewById(R.id.adminResultsTopicName);
         adminTopicVote = (TextView)findViewById(R.id.adminTopicResult);
-        reference = database.getInstance().getReference();
+        reference = database.getInstance().getReference().child("Topic");
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot dataSnapshot : snapshot.getChildren()){
-                 TopicNameAdmin = dataSnapshot.child("Topic").getValue().toString();
+                 TopicNameAdmin = dataSnapshot.getValue().toString();
                  adminTopicName.setText("Topic Name \n"+TopicNameAdmin);
+                 adminTopicVote.setText("Yes votes: \n"+TopicVoteYesAdmin+"\n No votes \n"+TopicVoteNoAdmin);
                 }
             }
 
@@ -40,7 +41,7 @@ public class admin_voting_results_page extends AppCompatActivity {
 
             }
         });
-        adminTopicVote.setText("Yes votes: \n"+TopicVoteYesAdmin+"\n No votes \n"+TopicVoteNoAdmin);
+
     }
 
     public void IntentAdminMainPage(View view) {
