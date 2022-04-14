@@ -30,7 +30,9 @@ public class admin_voting_results_page extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot dataSnapshot : snapshot.getChildren()){
-                 TopicNameAdmin = dataSnapshot.getValue().toString();
+                 String TopicNameAdmin = dataSnapshot.child("topicName").getValue().toString();
+                 String TopicVoteYesAdmin = dataSnapshot.child("Yes votes").getValue().toString();
+                 String TopicVoteNoAdmin = dataSnapshot.child("No votes").getValue().toString();
                  adminTopicName.setText("Topic Name \n"+TopicNameAdmin);
                  adminTopicVote.setText("Yes votes: \n"+TopicVoteYesAdmin+"\n No votes \n"+TopicVoteNoAdmin);
                 }
