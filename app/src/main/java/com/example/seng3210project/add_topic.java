@@ -35,7 +35,7 @@ public class add_topic extends AppCompatActivity {
         toSart = tStart.getText().toString();
         toEnd = tEnd.getText().toString();
         database = FirebaseDatabase.getInstance("https://seng3210project-default-rtdb.firebaseio.com/");
-        Topic newTopic = new Topic(toName,toSart,toEnd,1,1);
+        Topic newTopic = new Topic(toName,toSart,toEnd,0,0);
         reference = database.getReference("Topic");
         reference.child(newTopic.topicName).setValue(newTopic);
     }
