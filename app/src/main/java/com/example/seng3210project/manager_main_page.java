@@ -29,4 +29,5 @@ public class manager_main_page extends AppCompatActivity {
     public void gotologinfromadmin(View view) {
         startActivity(new Intent(getApplicationContext(),login_screen.class));
     }
+
 }

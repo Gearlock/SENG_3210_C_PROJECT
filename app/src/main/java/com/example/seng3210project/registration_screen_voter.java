@@ -120,4 +120,11 @@ public class registration_screen_voter extends AppCompatActivity {
         this.AGE = AGE;
     }
 
+    public DAO getData() {
+        return data;
+    }
+
+    public void setData(DAO data) {
+        this.data = data;
+    }
 }

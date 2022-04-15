@@ -30,4 +30,5 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(getApplicationContext(),login_screen.class)); // Go to the log-in screen
     }
 
+
 }

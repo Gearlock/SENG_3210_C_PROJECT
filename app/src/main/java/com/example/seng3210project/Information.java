@@ -43,4 +43,36 @@ public class Information {
     public void setpasswordofUser(String passwordofUser) {
         this.passwordofUser = passwordofUser;
     }
+
+    public String getFirstnameofUser() {
+        return firstnameofUser;
+    }
+
+    public void setFirstnameofUser(String firstnameofUser) {
+        this.firstnameofUser = firstnameofUser;
+    }
+
+    public String getLastnameofUser() {
+        return lastnameofUser;
+    }
+
+    public void setLastnameofUser(String lastnameofUser) {
+        this.lastnameofUser = lastnameofUser;
+    }
+
+    public String getAgeofUser() {
+        return ageofUser;
+    }
+
+    public void setAgeofUser(String ageofUser) {
+        this.ageofUser = ageofUser;
+    }
+
+    public String getPasswordofUser() {
+        return passwordofUser;
+    }
+
+    public void setPasswordofUser(String passwordofUser) {
+        this.passwordofUser = passwordofUser;
+    }
 }

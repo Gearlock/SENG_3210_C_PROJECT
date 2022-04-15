@@ -22,7 +22,21 @@ public class DAO {
         return reference;
     }
 
+    public FirebaseDatabase getDatabase() {
+        return database;
+    }
 
+    public void setDatabase(FirebaseDatabase database) {
+        this.database = database;
+    }
+
+    public DatabaseReference getReference() {
+        return reference;
+    }
+
+    public void setReference(DatabaseReference reference) {
+        this.reference = reference;
+    }
 }
 
 

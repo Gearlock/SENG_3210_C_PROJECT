@@ -48,4 +48,5 @@ public class Voter { // Generic class to hold the log-in info of a voter
         this.password = password;
     }
 
+
 }

@@ -39,6 +39,13 @@ public class add_topic extends AppCompatActivity {
         data.ref("Topic").child(newTopic.topicName).setValue(newTopic);
     }
 
+    public DAO getData() {
+        return data;
+    }
+
+    public void setData(DAO data) {
+        this.data = data;
+    }
 
     public EditText gettName() {
         return tName;

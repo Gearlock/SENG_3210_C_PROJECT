@@ -51,4 +51,52 @@ public class admin_voting_results_page extends AppCompatActivity {
     public void IntentAdminMainPage(View view) {
         startActivity(new Intent(getApplicationContext(),manager_main_page.class));
     }
+
+    public TextView getAdminTopicVote() {
+        return adminTopicVote;
+    }
+
+    public void setAdminTopicVote(TextView adminTopicVote) {
+        this.adminTopicVote = adminTopicVote;
+    }
+
+    public TextView getAdminTopicName() {
+        return adminTopicName;
+    }
+
+    public void setAdminTopicName(TextView adminTopicName) {
+        this.adminTopicName = adminTopicName;
+    }
+
+    public String getTopicNameAdmin() {
+        return TopicNameAdmin;
+    }
+
+    public void setTopicNameAdmin(String topicNameAdmin) {
+        TopicNameAdmin = topicNameAdmin;
+    }
+
+    public int getTopicVoteYesAdmin() {
+        return TopicVoteYesAdmin;
+    }
+
+    public void setTopicVoteYesAdmin(int topicVoteYesAdmin) {
+        TopicVoteYesAdmin = topicVoteYesAdmin;
+    }
+
+    public int getTopicVoteNoAdmin() {
+        return TopicVoteNoAdmin;
+    }
+
+    public void setTopicVoteNoAdmin(int topicVoteNoAdmin) {
+        TopicVoteNoAdmin = topicVoteNoAdmin;
+    }
+
+    public DAO getData() {
+        return data;
+    }
+
+    public void setData(DAO data) {
+        this.data = data;
+    }
 }

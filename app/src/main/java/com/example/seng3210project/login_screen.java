@@ -96,4 +96,59 @@ public class login_screen extends AppCompatActivity {
         });
     }
 
+    public EditText getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(EditText firstName) {
+        this.firstName = firstName;
+    }
+
+    public EditText getPassword() {
+        return password;
+    }
+
+    public void setPassword(EditText password) {
+        this.password = password;
+    }
+
+    public String getEnteredfirstName() {
+        return enteredfirstName;
+    }
+
+    public void setEnteredfirstName(String enteredfirstName) {
+        this.enteredfirstName = enteredfirstName;
+    }
+
+    public String getEnteredpassword() {
+        return enteredpassword;
+    }
+
+    public void setEnteredpassword(String enteredpassword) {
+        this.enteredpassword = enteredpassword;
+    }
+
+    public String getDatabaseFirstname() {
+        return databaseFirstname;
+    }
+
+    public void setDatabaseFirstname(String databaseFirstname) {
+        this.databaseFirstname = databaseFirstname;
+    }
+
+    public String getDatabasePassword() {
+        return databasePassword;
+    }
+
+    public void setDatabasePassword(String databasePassword) {
+        this.databasePassword = databasePassword;
+    }
+
+    public DAO getData() {
+        return data;
+    }
+
+    public void setData(DAO data) {
+        this.data = data;
+    }
 }

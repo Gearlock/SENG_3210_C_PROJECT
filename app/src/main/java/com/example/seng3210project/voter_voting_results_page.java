@@ -56,4 +56,52 @@ public class voter_voting_results_page extends AppCompatActivity {
     public void IntentVoterMainPage(View view) {
         startActivity(new Intent(getApplicationContext(),voterMainPage.class));
     }
+
+    public TextView getVoterTopicVote() {
+        return voterTopicVote;
+    }
+
+    public void setVoterTopicVote(TextView voterTopicVote) {
+        this.voterTopicVote = voterTopicVote;
+    }
+
+    public TextView getVoterTopicName() {
+        return voterTopicName;
+    }
+
+    public void setVoterTopicName(TextView voterTopicName) {
+        this.voterTopicName = voterTopicName;
+    }
+
+    public String getTopicNameVoter() {
+        return TopicNameVoter;
+    }
+
+    public void setTopicNameVoter(String topicNameVoter) {
+        TopicNameVoter = topicNameVoter;
+    }
+
+    public int getTopicVoteYesVoter() {
+        return TopicVoteYesVoter;
+    }
+
+    public void setTopicVoteYesVoter(int topicVoteYesVoter) {
+        TopicVoteYesVoter = topicVoteYesVoter;
+    }
+
+    public int getTopicVoteNoVoter() {
+        return TopicVoteNoVoter;
+    }
+
+    public void setTopicVoteNoVoter(int topicVoteNoVoter) {
+        TopicVoteNoVoter = topicVoteNoVoter;
+    }
+
+    public DAO getData() {
+        return data;
+    }
+
+    public void setData(DAO data) {
+        this.data = data;
+    }
 }

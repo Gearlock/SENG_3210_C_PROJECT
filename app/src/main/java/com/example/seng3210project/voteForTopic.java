@@ -72,4 +72,76 @@ public class voteForTopic extends AppCompatActivity { // Function to to allow a 
             Toast.makeText(this, "Vote cast successfully", Toast.LENGTH_LONG);
 
     }
+
+    public DatabaseReference getInnerReference() {
+        return innerReference;
+    }
+
+    public void setInnerReference(DatabaseReference innerReference) {
+        this.innerReference = innerReference;
+    }
+
+    public TextView getTopicDisplay() {
+        return topicDisplay;
+    }
+
+    public void setTopicDisplay(TextView topicDisplay) {
+        this.topicDisplay = topicDisplay;
+    }
+
+    public String getTopicFromDB() {
+        return topicFromDB;
+    }
+
+    public void setTopicFromDB(String topicFromDB) {
+        this.topicFromDB = topicFromDB;
+    }
+
+    public String getTopicNameFromDB() {
+        return topicNameFromDB;
+    }
+
+    public void setTopicNameFromDB(String topicNameFromDB) {
+        this.topicNameFromDB = topicNameFromDB;
+    }
+
+    public int getYesVote() {
+        return yesVote;
+    }
+
+    public void setYesVote(int yesVote) {
+        this.yesVote = yesVote;
+    }
+
+    public int getNoVote() {
+        return noVote;
+    }
+
+    public void setNoVote(int noVote) {
+        this.noVote = noVote;
+    }
+
+    public int getYesFromDB() {
+        return yesFromDB;
+    }
+
+    public void setYesFromDB(int yesFromDB) {
+        this.yesFromDB = yesFromDB;
+    }
+
+    public int getNoFromDB() {
+        return noFromDB;
+    }
+
+    public void setNoFromDB(int noFromDB) {
+        this.noFromDB = noFromDB;
+    }
+
+    public DAO getData() {
+        return data;
+    }
+
+    public void setData(DAO data) {
+        this.data = data;
+    }
 }

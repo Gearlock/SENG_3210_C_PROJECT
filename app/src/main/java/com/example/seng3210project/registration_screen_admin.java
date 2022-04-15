@@ -125,4 +125,19 @@ public class registration_screen_admin extends AppCompatActivity {
         startActivity(new Intent(this,login_screen.class)); // Go to the log-in screen
     }
 
+    public DAO getData() {
+        return data;
+    }
+
+    public void setData(DAO data) {
+        this.data = data;
+    }
+
+    public Button getRegistrationButtonVoter() {
+        return registrationButtonVoter;
+    }
+
+    public void setRegistrationButtonVoter(Button registrationButtonVoter) {
+        this.registrationButtonVoter = registrationButtonVoter;
+    }
 }

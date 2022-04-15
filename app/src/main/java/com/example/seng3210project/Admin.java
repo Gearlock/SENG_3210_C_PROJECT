@@ -46,4 +46,5 @@ public class Admin { // Generic class to hold the administrator's log-in info
     public void setAge(String age) {
         this.age = age;
     }
+
 }
