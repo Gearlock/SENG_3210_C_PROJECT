@@ -14,8 +14,7 @@ import com.google.firebase.database.FirebaseDatabase;
 // Registration process for registering an administrator to the system
 public class registration_screen_admin extends AppCompatActivity {
     // Set up firebase database
-    FirebaseDatabase database;
-    DatabaseReference reference;
+  DAO data = new DAO();
 
     Button registrationButtonVoter;
 
@@ -115,10 +114,10 @@ public class registration_screen_admin extends AppCompatActivity {
         laName = lname.getText().toString();
         passWord = pass.getText().toString();
         age = AGE.getText().toString();
-        database = FirebaseDatabase.getInstance("https://seng3210project-default-rtdb.firebaseio.com/"); // Get database instance
+       data.dataInstance(); // Get database instance
         Admin newAdmin = new Admin(fiName,laName,passWord,age); // Make a new admin with inputted info
-        reference = database.getReference("Admin");
-        reference.child(newAdmin.firstname).setValue(newAdmin); // Add the admin to the database
+        data.ref("Admin");
+        data.ref("Admin").child(newAdmin.firstname).setValue(newAdmin); // Add the admin to the database
 
     }
 

@@ -11,8 +11,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class add_topic extends AppCompatActivity {
-    FirebaseDatabase database;
-    DatabaseReference reference;
+
     private EditText tName,tStart,tEnd;
     private String toName,toSart,toEnd;
     DAO data = new DAO();
@@ -40,21 +39,6 @@ public class add_topic extends AppCompatActivity {
         data.ref("Topic").child(newTopic.topicName).setValue(newTopic);
     }
 
-    public FirebaseDatabase getDatabase() {
-        return database;
-    }
-
-    public void setDatabase(FirebaseDatabase database) {
-        this.database = database;
-    }
-
-    public DatabaseReference getReference() {
-        return reference;
-    }
-
-    public void setReference(DatabaseReference reference) {
-        this.reference = reference;
-    }
 
     public EditText gettName() {
         return tName;

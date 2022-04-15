@@ -15,11 +15,9 @@ import com.google.firebase.database.FirebaseDatabase;
 // Registration process for registering a voter to the system
 public class registration_screen_voter extends AppCompatActivity {
     // Set up firebase database
-    FirebaseDatabase database;
-    DatabaseReference reference;
 
     Button registrationButtonVoter;
-
+    DAO data = new DAO();
     // Variables for voter user info
     private EditText fname,lname,pass,AGE;
     private String fiName,laName,passWord,age;
@@ -40,10 +38,10 @@ public class registration_screen_voter extends AppCompatActivity {
         laName = lname.getText().toString();
         passWord = pass.getText().toString();
         age = AGE.getText().toString();
-        database = FirebaseDatabase.getInstance("https://seng3210project-default-rtdb.firebaseio.com/"); // Get database instance
+       data.dataInstance(); // Get database instance
         Voter newVoter = new Voter(fiName,laName,passWord,age); // Make a new voter with inputted info
-            reference = database.getReference("Voters");
-            reference.child(newVoter.firstname).setValue(newVoter); // Add the voter to the database
+            data.ref("Voters");
+            data.ref("Voters").child(newVoter.firstname).setValue(newVoter); // Add the voter to the database
     }
 
     public void gotologinfromvoter(View view){
@@ -56,22 +54,6 @@ public class registration_screen_voter extends AppCompatActivity {
 
     public void setRegistrationButtonVoter(Button registrationButtonVoter) {
         this.registrationButtonVoter = registrationButtonVoter;
-    }
-
-    public FirebaseDatabase getDatabase() {
-        return database;
-    }
-
-    public void setDatabase(FirebaseDatabase database) {
-        this.database = database;
-    }
-
-    public DatabaseReference getReference() {
-        return reference;
-    }
-
-    public void setReference(DatabaseReference reference) {
-        this.reference = reference;
     }
 
     public String getFiName() {

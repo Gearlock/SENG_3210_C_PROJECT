@@ -40,7 +40,7 @@ public class voter_voting_results_page extends AppCompatActivity {
                         voterTopicVote.setText("For won the vote with: \n" + TopicVoteYesVoter+" votes");
                     }
                     else{
-                        voterTopicVote.setText("Against won the vote with: \n" + TopicVoteYesVoter+" votes");
+                        voterTopicVote.setText("Against won the vote with: \n" + TopicVoteNoVoter+" votes");
                     }
                 }
             }
