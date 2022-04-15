@@ -10,6 +10,9 @@
         android:layout_width="245dp"
         android:layout_height="64dp"
         android:text="YesorNo"
+        android:textColor="#000000"
+        android:textColorHint="#040202"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.096"
@@ -22,6 +25,8 @@
         android:layout_width="244dp"
         android:layout_height="70dp"
         android:text="Topic Name"
+        android:textColor="#0B0505"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.095"
@@ -31,15 +36,17 @@
 
     <TextView
         android:id="@+id/adminResultsScreen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="247dp"
+        android:layout_height="49dp"
         android:text="Voting Topic Results"
+        android:textColor="#050101"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintHorizontal_bias="0.079"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.039" />
+        app:layout_constraintVertical_bias="0.021" />
 
     <Button
         android:id="@+id/adminResultsBacktoMenu"
