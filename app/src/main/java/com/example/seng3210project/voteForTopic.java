@@ -16,13 +16,15 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.ktx.Firebase;
 
 public class voteForTopic extends AppCompatActivity { // Function to to allow a voter to vote for or against a topic
     FirebaseDatabase database;
     DatabaseReference reference,innerReference;
     private TextView topicDisplay;
     private String topicFromDB,topicNameFromDB;
-    int yesVote,noVote;
+    int yesVote = 1,noVote = 1,yesFromDB,noFromDB;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,10 +34,11 @@ public class voteForTopic extends AppCompatActivity { // Function to to allow a 
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-                    String topicNameFromDB = dataSnapshot.child("topicName").getValue().toString();
+                    topicNameFromDB = dataSnapshot.child("topicName").getValue().toString();
                     topicDisplay = (TextView) findViewById(R.id.votingTopic);
                     topicDisplay.setText("Topic details \n"+ topicNameFromDB);
-
+                    yesFromDB = Integer.parseInt(dataSnapshot.child("yes").getValue().toString());
+                    noFromDB = Integer.parseInt(dataSnapshot.child("no").getValue().toString());
                 }
             }
 
@@ -45,6 +48,7 @@ public class voteForTopic extends AppCompatActivity { // Function to to allow a 
             }
         });
         database = FirebaseDatabase.getInstance("https://seng3210project-default-rtdb.firebaseio.com/");
+
     }
 
     public void IntentVoterMainPage(View view) {
@@ -54,18 +58,19 @@ public class voteForTopic extends AppCompatActivity { // Function to to allow a 
     public void voterVoteFor(View view) {
         reference = database.getInstance().getReference().child("Topic");
         innerReference = reference.child(topicNameFromDB);
-        yesVote++;
-        innerReference.child("Yes votes").setValue(yesVote);
-        startActivity(new Intent(getApplicationContext(),voterMainPage.class));
-        Toast.makeText(this,"Vote cast successfully", Toast.LENGTH_LONG);
-    }
+            yesVote = yesVote + yesFromDB;
+            innerReference.child("yes").setValue(yesVote);
+            startActivity(new Intent(getApplicationContext(), voterMainPage.class));
+            Toast.makeText(this, "Vote cast successfully", Toast.LENGTH_LONG);
 
+    }
     public void voterVoteAgainst(View view) {
         reference = database.getInstance().getReference().child("Topic");
         innerReference = reference.child(topicNameFromDB);
-        noVote++;
-        innerReference.child("No votes").setValue(noVote);
-        startActivity(new Intent(getApplicationContext(),voterMainPage.class));
-        Toast.makeText(this,"Vote cast successfully", Toast.LENGTH_LONG);
+            noVote = noVote + noFromDB;
+            innerReference.child("no").setValue(noVote);
+            startActivity(new Intent(getApplicationContext(), voterMainPage.class));
+            Toast.makeText(this, "Vote cast successfully", Toast.LENGTH_LONG);
+
     }
 }

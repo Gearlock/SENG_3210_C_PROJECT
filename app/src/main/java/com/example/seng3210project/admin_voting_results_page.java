@@ -18,7 +18,8 @@ public class admin_voting_results_page extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference reference;
     private TextView adminTopicVote,adminTopicName;
-    private String TopicNameAdmin, TopicVoteYesAdmin,TopicVoteNoAdmin;
+    private String TopicNameAdmin;
+    int TopicVoteYesAdmin,TopicVoteNoAdmin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,11 +32,11 @@ public class admin_voting_results_page extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot dataSnapshot : snapshot.getChildren()){
                  String TopicNameAdmin = dataSnapshot.child("topicName").getValue().toString();
-                 String TopicVoteYesAdmin = dataSnapshot.child("Yes votes").getValue().toString();
-                 String TopicVoteNoAdmin = dataSnapshot.child("No votes").getValue().toString();
+                 TopicVoteYesAdmin = Integer.parseInt(dataSnapshot.child("yes").getValue().toString()) - 1;
+                 TopicVoteNoAdmin = Integer.parseInt(dataSnapshot.child("no").getValue().toString()) - 1;
 
                  adminTopicName.setText("Topic Name \n"+TopicNameAdmin);
-                 adminTopicVote.setText("For: \n"+TopicVoteYesAdmin+"\n Against: \n"+TopicVoteNoAdmin);
+                 adminTopicVote.setText("For: \n"+(TopicVoteYesAdmin)+"\n Against: \n"+(TopicVoteNoAdmin));
                 }
             }
 
