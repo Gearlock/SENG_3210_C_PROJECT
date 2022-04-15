@@ -32,9 +32,9 @@ public class voter_voting_results_page extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot dataSnapshot : snapshot.getChildren()) {
-                    String TopicNameVoter = dataSnapshot.child("topicName").getValue().toString();
-                    TopicVoteYesVoter = Integer.parseInt(dataSnapshot.child("Yes votes").getValue().toString());
-                    TopicVoteNoVoter = Integer.parseInt(dataSnapshot.child("No votes").getValue().toString());
+                    TopicNameVoter = dataSnapshot.child("topicName").getValue().toString();
+                    TopicVoteYesVoter = Integer.parseInt(dataSnapshot.child("yes").getValue().toString());
+                    TopicVoteNoVoter = Integer.parseInt(dataSnapshot.child("no").getValue().toString());
                     voterTopicName.setText("Topic Name \n" + TopicNameVoter);
                     if (TopicVoteYesVoter > TopicVoteNoVoter) {
                         voterTopicVote.setText("For won the vote with: \n" + TopicVoteYesVoter+" votes");
