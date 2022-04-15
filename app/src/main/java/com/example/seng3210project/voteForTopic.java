@@ -19,18 +19,17 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.ktx.Firebase;
 
 public class voteForTopic extends AppCompatActivity { // Function to to allow a voter to vote for or against a topic
-    FirebaseDatabase database;
-    DatabaseReference reference,innerReference;
+    DatabaseReference innerReference;
     private TextView topicDisplay;
     private String topicFromDB,topicNameFromDB;
     int yesVote = 1,noVote = 1,yesFromDB,noFromDB;
-
+    DAO data = new DAO();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.vote_for_topic);
-        reference = database.getInstance().getReference().child("Topic");
-        reference.addValueEventListener(new ValueEventListener() {
+        data.DBchild("Topic");
+        data.DBchild("Topic").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
@@ -47,7 +46,7 @@ public class voteForTopic extends AppCompatActivity { // Function to to allow a 
 
             }
         });
-        database = FirebaseDatabase.getInstance("https://seng3210project-default-rtdb.firebaseio.com/");
+        data.dataInstance();
 
     }
 
@@ -56,8 +55,8 @@ public class voteForTopic extends AppCompatActivity { // Function to to allow a 
     }
 
     public void voterVoteFor(View view) {
-        reference = database.getInstance().getReference().child("Topic");
-        innerReference = reference.child(topicNameFromDB);
+        data.DBchild("Topic");
+        innerReference = data.DBchild("Topic").child(topicNameFromDB);
             yesVote = yesVote + yesFromDB;
             innerReference.child("yes").setValue(yesVote);
             startActivity(new Intent(getApplicationContext(), voterMainPage.class));
@@ -65,8 +64,8 @@ public class voteForTopic extends AppCompatActivity { // Function to to allow a 
 
     }
     public void voterVoteAgainst(View view) {
-        reference = database.getInstance().getReference().child("Topic");
-        innerReference = reference.child(topicNameFromDB);
+        data.DBchild("Topic");
+        innerReference = data.DBchild("Topic").child(topicNameFromDB);
             noVote = noVote + noFromDB;
             innerReference.child("no").setValue(noVote);
             startActivity(new Intent(getApplicationContext(), voterMainPage.class));

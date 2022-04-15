@@ -15,19 +15,19 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class admin_voting_results_page extends AppCompatActivity {
-    FirebaseDatabase database;
-    DatabaseReference reference;
+
     private TextView adminTopicVote,adminTopicName;
     private String TopicNameAdmin;
     int TopicVoteYesAdmin,TopicVoteNoAdmin;
+    DAO data = new DAO();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.admin_voting_results_page);
         adminTopicName = (TextView)findViewById(R.id.adminResultsTopicName);
         adminTopicVote = (TextView)findViewById(R.id.adminTopicResult);
-        reference = database.getInstance().getReference().child("Topic");
-        reference.addValueEventListener(new ValueEventListener() {
+        data.DBchild("Topic");
+        data.DBchild("Topic").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot dataSnapshot : snapshot.getChildren()){

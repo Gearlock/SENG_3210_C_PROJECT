@@ -15,7 +15,7 @@ public class add_topic extends AppCompatActivity {
     DatabaseReference reference;
     private EditText tName,tStart,tEnd;
     private String toName,toSart,toEnd;
-
+    DAO data = new DAO();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,10 +34,10 @@ public class add_topic extends AppCompatActivity {
         toName = tName.getText().toString();
         toSart = tStart.getText().toString();
         toEnd = tEnd.getText().toString();
-        database = FirebaseDatabase.getInstance("https://seng3210project-default-rtdb.firebaseio.com/");
+        data.dataInstance();
         Topic newTopic = new Topic(toName,toSart,toEnd,0,0);
-        reference = database.getReference("Topic");
-        reference.child(newTopic.topicName).setValue(newTopic);
+        data.ref("Topic");
+        data.ref("Topic").child(newTopic.topicName).setValue(newTopic);
     }
 
     public FirebaseDatabase getDatabase() {

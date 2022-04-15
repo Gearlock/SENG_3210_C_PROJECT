@@ -23,14 +23,15 @@ import java.util.Objects;
 // Log in screen for voters and administrators
 public class login_screen extends AppCompatActivity {
 
-    FirebaseDatabase database;
-    DatabaseReference reference;
     private EditText firstName,password;
     private String enteredfirstName,enteredpassword,databaseFirstname,databasePassword;
+    DAO data = new DAO();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_screen);
+
     }
     public void IntentRegistrationScreen(View view){
         startActivity(new Intent(getApplicationContext(),MainActivity.class)); // Goes to the main registration screen
@@ -40,9 +41,9 @@ public class login_screen extends AppCompatActivity {
         password = (EditText)findViewById(R.id.registerPassword);
         enteredpassword = password.getText().toString();
         enteredfirstName = firstName.getText().toString();
-        reference = database.getInstance().getReference().child("Voters");
+        data.DBchild("Voters");
 
-        reference.addValueEventListener(new ValueEventListener() {
+        data.DBchild("Voters").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot dataSnapshot: snapshot.getChildren()) {
@@ -70,9 +71,9 @@ public class login_screen extends AppCompatActivity {
         password = (EditText) findViewById(R.id.registerPassword);
         enteredpassword = password.getText().toString();
         enteredfirstName = firstName.getText().toString();
-        reference = database.getInstance().getReference().child("Admin");
+        data.DBchild("Admin");
 
-        reference.addValueEventListener(new ValueEventListener() {
+        data.DBchild("Admin").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
