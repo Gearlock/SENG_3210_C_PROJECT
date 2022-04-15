@@ -15,27 +15,33 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class voter_voting_results_page extends AppCompatActivity {
-    FirebaseDatabase database;
-    DatabaseReference reference;
-    private TextView voterTopicVote,voterTopicName;
-    private String TopicNameVoter, TopicVoteYesVoter,TopicVoteNoVoter;
 
+    private TextView voterTopicVote,voterTopicName;
+    private String TopicNameVoter;
+    int TopicVoteYesVoter,TopicVoteNoVoter;
+
+    DAO data = new DAO();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.voter_voting_results_page);
         voterTopicName = (TextView)findViewById(R.id.resultsTopicName);
         voterTopicVote = (TextView)findViewById(R.id.topicResult);
-        reference = database.getInstance().getReference().child("Topic");
-        reference.addValueEventListener(new ValueEventListener() {
+        data.DBchild("Topic");
+        data.DBchild("Topic").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for(DataSnapshot dataSnapshot : snapshot.getChildren()){
+                for(DataSnapshot dataSnapshot : snapshot.getChildren()) {
                     String TopicNameVoter = dataSnapshot.child("topicName").getValue().toString();
-                    String TopicVoteYesVoter = dataSnapshot.child("Yes votes").getValue().toString();
-                    String TopicVoteNoVoter = dataSnapshot.child("No votes").getValue().toString();
-                    voterTopicName.setText("Topic Name \n"+TopicNameVoter);
-                    voterTopicVote.setText("For: \n"+TopicVoteYesVoter+"\n Against: \n"+TopicVoteNoVoter);
+                    TopicVoteYesVoter = Integer.parseInt(dataSnapshot.child("Yes votes").getValue().toString());
+                    TopicVoteNoVoter = Integer.parseInt(dataSnapshot.child("No votes").getValue().toString());
+                    voterTopicName.setText("Topic Name \n" + TopicNameVoter);
+                    if (TopicVoteYesVoter > TopicVoteNoVoter) {
+                        voterTopicVote.setText("For won the vote with: \n" + TopicVoteYesVoter+" votes");
+                    }
+                    else{
+                        voterTopicVote.setText("Against won the vote with: \n" + TopicVoteYesVoter+" votes");
+                    }
                 }
             }
 
