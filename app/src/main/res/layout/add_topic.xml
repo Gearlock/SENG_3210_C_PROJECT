@@ -25,6 +25,7 @@
         android:backgroundTint="#4772E4"
         android:onClick="IntentAdminMainPage"
         android:text="Back To Menu"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.944"
@@ -37,14 +38,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#4772E4"
+        android:onClick="addTopicTODB"
         android:text="Add topic"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.569"
-        android:onClick="addTopicTODB"/>
+        app:layout_constraintVertical_bias="0.569" />
 
     <EditText
         android:id="@+id/topicName"

@@ -25,6 +25,7 @@
         android:backgroundTint="#4772E4"
         android:onClick="IntentVoterMainPage"
         android:text="Back To Menu"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.902"

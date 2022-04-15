@@ -13,6 +13,7 @@
         android:backgroundTint="#4772E4"
         android:onClick="IntentRegistrationScreen"
         android:text="Don't have an account? Register Here"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.375"
@@ -39,14 +40,15 @@
         android:layout_width="343dp"
         android:layout_height="79dp"
         android:backgroundTint="#4772E4"
+        android:onClick="loginAsAdmin"
         android:text="Login as an administrator"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.344"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.648"
-        android:onClick="loginAsAdmin"/>
+        app:layout_constraintVertical_bias="0.648" />
 
     <EditText
         android:id="@+id/registerPassword"
@@ -79,12 +81,13 @@
         android:layout_width="352dp"
         android:layout_height="74dp"
         android:backgroundTint="#4772E4"
+        android:onClick="loginAsVoter"
         android:text="Login as a Voter"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.355"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.458"
-        android:onClick="loginAsVoter"/>
+        app:layout_constraintVertical_bias="0.458" />
 </androidx.constraintlayout.widget.ConstraintLayout>
