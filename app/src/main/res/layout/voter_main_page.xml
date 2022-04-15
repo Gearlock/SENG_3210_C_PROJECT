@@ -11,42 +11,45 @@
         android:layout_width="168dp"
         android:layout_height="137dp"
         android:backgroundTint="#4772E4"
+        android:onClick="IntentVotingForTopic"
         android:text="Voting Page"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.061"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.118"
-        android:onClick="IntentVotingForTopic"/>
+        app:layout_constraintVertical_bias="0.118" />
 
     <Button
         android:id="@+id/editUserDetails"
         android:layout_width="155dp"
         android:layout_height="137dp"
         android:backgroundTint="#4772E4"
+        android:onClick="IntentVoterRegistration"
         android:text="Edit User Details"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.939"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.118"
-        android:onClick="IntentVoterRegistration"/>
+        app:layout_constraintVertical_bias="0.118" />
 
     <Button
         android:id="@+id/results"
         android:layout_width="167dp"
         android:layout_height="143dp"
         android:backgroundTint="#4772E4"
+        android:onClick="IntentVoterResults"
         android:text="Results"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.062"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.403"
-        android:onClick="IntentVoterResults"/>
+        app:layout_constraintVertical_bias="0.403" />
 
     <Button
         android:id="@+id/logout"

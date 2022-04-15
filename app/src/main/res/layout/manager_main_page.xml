@@ -13,6 +13,7 @@
         android:backgroundTint="#4772E4"
         android:onClick="gotocreatevotingtopic"
         android:text="Create voting topic"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.112"
@@ -27,6 +28,7 @@
         android:backgroundTint="#4772E4"
         android:onClick="gotoadminregisterfromadminmain"
         android:text="Edit user details"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.936"
@@ -36,29 +38,31 @@
 
     <Button
         android:id="@+id/resultsAdmin"
-        android:layout_width="159dp"
-        android:layout_height="82dp"
+        android:layout_width="170dp"
+        android:layout_height="89dp"
         android:backgroundTint="#4772E4"
         android:onClick="gotovotingresults"
         android:text="Results"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.107"
+        app:layout_constraintHorizontal_bias="0.112"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.436" />
+        app:layout_constraintVertical_bias="0.429" />
 
     <Button
         android:id="@+id/adminLogout"
-        android:layout_width="151dp"
-        android:layout_height="75dp"
+        android:layout_width="162dp"
+        android:layout_height="89dp"
         android:backgroundTint="#E44141"
         android:onClick="gotologinfromadmin"
         android:text="LOGout"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.903"
+        app:layout_constraintHorizontal_bias="0.943"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.431" />
+        app:layout_constraintVertical_bias="0.428" />
 </androidx.constraintlayout.widget.ConstraintLayout>
