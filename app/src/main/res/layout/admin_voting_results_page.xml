@@ -7,18 +7,18 @@
 
     <TextView
         android:id="@+id/adminTopicResult"
-        android:layout_width="245dp"
-        android:layout_height="64dp"
+        android:layout_width="388dp"
+        android:layout_height="348dp"
         android:text="YesorNo"
         android:textColor="#000000"
         android:textColorHint="#040202"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintHorizontal_bias="0.565"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.613" />
+        app:layout_constraintVertical_bias="0.958" />
 
     <TextView
         android:id="@+id/adminResultsTopicName"
@@ -32,7 +32,7 @@
         app:layout_constraintHorizontal_bias="0.095"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.322" />
+        app:layout_constraintVertical_bias="0.246" />
 
     <TextView
         android:id="@+id/adminResultsScreen"

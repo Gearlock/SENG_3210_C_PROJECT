@@ -36,7 +36,7 @@ public class admin_voting_results_page extends AppCompatActivity {
                  TopicVoteNoAdmin = Integer.parseInt(dataSnapshot.child("no").getValue().toString());
 
                  adminTopicName.setText("Topic Name \n"+TopicNameAdmin);
-                 adminTopicVote.setText("For: \n"+(TopicVoteYesAdmin)+"\n Against: \n"+(TopicVoteNoAdmin));
+                 adminTopicVote.setText("For: \n"+TopicVoteYesAdmin+"\n Against: \n"+TopicVoteNoAdmin);
                 }
             }
 
