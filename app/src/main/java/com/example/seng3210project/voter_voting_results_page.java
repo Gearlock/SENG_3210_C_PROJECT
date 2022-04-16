@@ -1,17 +1,15 @@
 package com.example.seng3210project;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class voter_voting_results_page extends AppCompatActivity {
@@ -36,7 +34,7 @@ public class voter_voting_results_page extends AppCompatActivity {
                     TopicVoteYesVoter = Integer.parseInt(dataSnapshot.child("yes").getValue().toString());
                     TopicVoteNoVoter = Integer.parseInt(dataSnapshot.child("no").getValue().toString());
                     voterTopicName.setText("Topic Name \n" + TopicNameVoter);
-                    if (TopicVoteYesVoter > TopicVoteNoVoter) {
+                    if (whichOneWon(TopicVoteYesVoter,TopicVoteNoVoter)) {
                         voterTopicVote.setText("For won the vote with: \n" + TopicVoteYesVoter+" votes");
                     }
                     else{
@@ -51,6 +49,15 @@ public class voter_voting_results_page extends AppCompatActivity {
             }
         });
 
+    }
+
+    public static boolean whichOneWon(int yes, int no){
+        if(yes>no) {
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     public void IntentVoterMainPage(View view) {
